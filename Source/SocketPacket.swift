@@ -106,7 +106,7 @@ struct SocketPacket {
         // Binary count?
         let binaryCountString = typeString + (type == .binaryEvent || type == .binaryAck ? "\(String(binary.count))-" : "")
         // Namespace?
-        let nspString = binaryCountString + (nsp != "/" ? "\(nsp)," : "")
+        let nspString = binaryCountString + (nsp != "/" ? "\(nsp)," : "0")
         // Ack number?
         let idString = nspString + (id != -1 ? String(id) : "")
         
